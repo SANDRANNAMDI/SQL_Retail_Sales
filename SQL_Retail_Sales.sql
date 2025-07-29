@@ -19,7 +19,6 @@ CREATE TABLE Retail_Sales
 					total_sale FLOAT
 				);
 
-SELECT * FROM Retail_Sales;
 
 -- DATA CLEANING
 SELECT TOP 10 * FROM Retail_Sales;
@@ -114,7 +113,7 @@ Where category = 'clothing'
 	AND
 	quantity >= 4
 
--- Q3 Write a SQL  query to calculate the total sales (total_sale) for each category.
+-- Q3 Write a SQL query to calculate the total sales (total_sale) for each category.
 
 SELECT 
 	Category,
@@ -123,20 +122,20 @@ SELECT
 FROM Retail_Sales
 GROUP BY category
 
--- Q4 Write a SQL  query to find the average age of customers who purchased items from the 'Beauty' category.
+-- Q4 Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
 
 SELECT 
 	AVG(age) as avg_age
 FROM Retail_Sales
 WHERE category = 'Beauty'
 
--- Q5 Write a SQL  query to find all transactions where the total_sale is greater than 1000.
+-- Q5 Write a SQL query to find all transactions where the total_sale is greater than 1000.
 
 SELECT *
 FROM Retail_Sales
 WHERE total_sale > 1000
 
--- Q6 Write a SQL  query to find the total number of transactions (transaction_id) made by each gender in each category.
+-- Q6 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
 
 SELECT 
 	category,
@@ -148,12 +147,12 @@ GROUP BY
 	gender
 ORDER BY 1
 
--- Q7 Write a SQL  query to calculate the average sale for each month. Find out best-selling month in each year.
+-- Q7 Write a SQL query to calculate the average sale for each month. Find out best-selling month in each year.
 
 SELECT 
-		year,
-		month,
-		avg_sale
+	year,
+	month,
+	avg_sale
 FROM
 (
 SELECT 
@@ -168,7 +167,7 @@ GROUP BY
 ) as t2
 WHERE rank = 1
 
--- Q8 Write a SQL  query to find the top 5 customers based on the highest total sales.
+-- Q8 Write a SQL query to find the top 5 customers based on the highest total sales.
 
 SELECT TOP 5
 	customer_id,
@@ -177,7 +176,7 @@ FROM Retail_Sales
 GROUP BY customer_id
 ORDER BY 2 Desc
 
--- Q9 Write a SQL  query to find the number of unique customers who purhased items from each category.
+-- Q9 Write a SQL query to find the number of unique customers who purhased items from each category.
 
 SELECT 
 	category,

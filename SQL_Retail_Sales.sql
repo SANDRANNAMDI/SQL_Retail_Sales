@@ -21,9 +21,9 @@ CREATE TABLE Retail_Sales
 
 
 -- DATA CLEANING
-SELECT TOP 10 * FROM Retail_Sales;
-
 SELECT COUNT (*) FROM Retail_Sales;
+
+SELECT TOP 10 * FROM Retail_Sales;
 
 SELECT * FROM Retail_Sales
 WHERE 
@@ -49,7 +49,7 @@ WHERE
 		OR
 		total_sale is NULL;
 
--- Deleting null data
+-- DELETING NULL DATA
 DELETE FROM Retail_Sales
 where
 		transactions_id is NULL

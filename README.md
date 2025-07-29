@@ -40,8 +40,6 @@ CREATE TABLE Retail_Sales
 					cogs FLOAT,	
 					total_sale FLOAT
 				);
-
-SELECT * FROM Retail_Sales;
 ```
 
 ### 2. Data Cleaning 
